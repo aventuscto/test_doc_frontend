@@ -27,11 +27,11 @@ const Login = ({ onLogin }) => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-slate-50 py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-50 to-white">
+        <div className="min-h-screen flex items-center justify-center bg-slate-50 py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-white">
             <div className="max-w-md w-full space-y-8 bg-white p-10 rounded-2xl shadow-xl border border-slate-100">
                 <div>
                     <h2 className="mt-6 text-center text-3xl font-extrabold text-slate-900 tracking-tight">
-                        Sign in to DocManager
+                        Sign in to Aventus Docs
                     </h2>
                     <p className="mt-2 text-center text-sm text-slate-600">
                         Enter your credentials to access the portal
@@ -39,7 +39,7 @@ const Login = ({ onLogin }) => {
                 </div>
                 <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
                     {error && (
-                        <div className="bg-red-50 text-red-600 p-3 rounded-lg text-sm font-medium border border-red-100 flex items-center">
+                        <div className="bg-blue-50 text-blue-600 p-3 rounded-lg text-sm font-medium border border-blue-100 flex items-center">
                             <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" /></svg>
                             {error}
                         </div>
@@ -77,7 +77,7 @@ const Login = ({ onLogin }) => {
                         <button
                             type="submit"
                             disabled={loading}
-                            className="group relative w-full flex justify-center py-2.5 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition duration-200 shadow-md hover:shadow-lg transform active:scale-[0.98]"
+                            className="group relative w-full flex justify-center py-2.5 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-200 shadow-md hover:shadow-lg transform active:scale-[0.98]"
                         >
                             {loading ? (
                                 <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -88,8 +88,8 @@ const Login = ({ onLogin }) => {
                         </button>
                     </div>
                 </form>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 };
 

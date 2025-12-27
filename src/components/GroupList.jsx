@@ -77,7 +77,7 @@ const GroupList = () => {
                                 <label
                                     key={role.id}
                                     className={`relative flex items-center p-3 rounded-lg border cursor-pointer transition-all duration-200 hover:shadow-sm ${selectedRoles.includes(role.id)
-                                        ? 'bg-red-50 border-red-200 ring-1 ring-red-200'
+                                        ? 'bg-blue-50 border-blue-200 ring-1 ring-blue-200'
                                         : 'bg-white border-slate-200 hover:border-slate-300'
                                         }`}
                                 >
@@ -85,7 +85,7 @@ const GroupList = () => {
                                         type="checkbox"
                                         checked={selectedRoles.includes(role.id)}
                                         onChange={() => handleCheckboxChange(role.id)}
-                                        className="h-4 w-4 text-red-600 focus:ring-red-500 border-gray-300 rounded mr-3"
+                                        className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded mr-3"
                                     />
                                     <span className="text-sm font-medium text-slate-700">{role.name}</span>
                                 </label>
@@ -118,7 +118,7 @@ const GroupList = () => {
                             <div className="flex flex-wrap gap-2">
                                 {group.roles && group.roles.length > 0 ? (
                                     group.roles.map(r => (
-                                        <span key={r.id} className="bg-red-50 text-red-700 text-xs px-2.5 py-1 rounded-md font-medium border border-red-100">
+                                        <span key={r.id} className="bg-blue-50 text-blue-700 text-xs px-2.5 py-1 rounded-md font-medium border border-blue-100">
                                             {r.name}
                                         </span>
                                     ))

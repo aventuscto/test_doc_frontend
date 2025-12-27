@@ -77,7 +77,7 @@ const RoleList = () => {
                                 <label
                                     key={perm.id}
                                     className={`relative flex items-center p-3 rounded-lg border cursor-pointer transition-all duration-200 hover:shadow-sm ${selectedPermissions.includes(perm.id)
-                                        ? 'bg-orange-50 border-orange-200 ring-1 ring-orange-200'
+                                        ? 'bg-blue-50 border-blue-200 ring-1 ring-blue-200'
                                         : 'bg-white border-slate-200 hover:border-slate-300'
                                         }`}
                                 >
@@ -85,7 +85,7 @@ const RoleList = () => {
                                         type="checkbox"
                                         checked={selectedPermissions.includes(perm.id)}
                                         onChange={() => handleCheckboxChange(perm.id)}
-                                        className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded mr-3"
+                                        className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded mr-3"
                                     />
                                     <span className="text-sm font-medium text-slate-700">{perm.name}</span>
                                 </label>
@@ -96,7 +96,7 @@ const RoleList = () => {
                     <div className="flex justify-end">
                         <button
                             type="submit"
-                            className="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition duration-200 font-medium shadow-sm"
+                            className="btn-primary"
                             disabled={loading}
                         >
                             {loading ? 'Creating...' : 'Create Role'}
@@ -118,7 +118,7 @@ const RoleList = () => {
                             <div className="flex flex-wrap gap-2">
                                 {role.permissions && role.permissions.length > 0 ? (
                                     role.permissions.map(p => (
-                                        <span key={p.id} className="bg-orange-50 text-orange-700 text-xs px-2.5 py-1 rounded-md font-medium border border-orange-100">
+                                        <span key={p.id} className="bg-blue-50 text-blue-700 text-xs px-2.5 py-1 rounded-md font-medium border border-blue-100">
                                             {p.name}
                                         </span>
                                     ))

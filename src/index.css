@@ -13,7 +13,7 @@
 
 @layer components {
     .btn-primary {
-        @apply bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition duration-200 font-medium shadow-sm hover:shadow-md active:transform active:scale-95;
+        @apply bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-200 font-medium shadow-sm hover:shadow-md active:transform active:scale-95;
     }
 
     .btn-secondary {
@@ -21,7 +21,7 @@
     }
 
     .input-field {
-        @apply mt-1 block w-full border border-slate-300 rounded-lg shadow-sm p-2.5 focus:ring-2 focus:ring-red-500 focus:border-red-500 transition duration-200 sm:text-sm;
+        @apply mt-1 block w-full border border-slate-300 rounded-lg shadow-sm p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200 sm:text-sm;
     }
 
     .card {

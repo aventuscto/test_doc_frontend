@@ -138,7 +138,7 @@ const UserList = () => {
                                 <td className="table-cell font-medium text-slate-900">{user.username}</td>
                                 <td className="table-cell">
                                     {user.group ? (
-                                        <span className="bg-red-50 text-red-700 px-2.5 py-0.5 rounded-full text-xs font-semibold border border-red-100">
+                                        <span className="bg-blue-50 text-blue-700 px-2.5 py-0.5 rounded-full text-xs font-semibold border border-blue-100">
                                             {user.group.name}
                                         </span>
                                     ) : (
@@ -148,14 +148,14 @@ const UserList = () => {
                                 <td className="table-cell">
                                     <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${user.is_active
                                         ? 'bg-emerald-50 text-emerald-700 border-emerald-100'
-                                        : 'bg-red-50 text-red-700 border-red-100'
+                                        : 'bg-blue-50 text-blue-700 border border-blue-100'
                                         }`}>
-                                        <span className={`w-1.5 h-1.5 rounded-full mr-1.5 ${user.is_active ? 'bg-emerald-500' : 'bg-red-500'}`}></span>
+                                        <span className={`w-1.5 h-1.5 rounded-full mr-1.5 ${user.is_active ? 'bg-emerald-500' : 'bg-blue-500'}`}></span>
                                         {user.is_active ? 'Active' : 'Inactive'}
                                     </span>
                                 </td>
                                 <td className="table-cell text-right">
-                                    <button className="text-slate-400 hover:text-red-600 transition-colors">
+                                    <button className="text-slate-400 hover:text-blue-600 transition-colors">
                                         Edit
                                     </button>
                                 </td>
