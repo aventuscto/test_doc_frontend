@@ -31,7 +31,7 @@ const Login = ({ onLogin }) => {
             <div className="max-w-md w-full space-y-8 bg-white p-10 rounded-2xl shadow-xl border border-slate-100">
                 <div>
                     <h2 className="mt-6 text-center text-3xl font-extrabold text-slate-900 tracking-tight">
-                        Sign in to Aventus Docs
+                        Sign in to Anish docs
                     </h2>
                     <p className="mt-2 text-center text-sm text-slate-600">
                         Enter your credentials to access the portal

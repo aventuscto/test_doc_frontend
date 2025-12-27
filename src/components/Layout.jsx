@@ -23,7 +23,7 @@ const Layout = ({ handleLogout, user }) => {
                         <div className="flex">
                             <div className="flex-shrink-0 flex items-center">
                                 <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                                    Aventus Docs
+                                    Anish docs
                                 </span>
                             </div>
                             <div className="hidden sm:ml-8 sm:flex sm:space-x-8">
