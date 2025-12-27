@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import api from '../api';
+import { userAPI } from '../api';
 
 const UserList = () => {
     const [users, setUsers] = useState([]);
@@ -15,8 +15,8 @@ const UserList = () => {
     const fetchData = async () => {
         try {
             const [usersRes, groupsRes] = await Promise.all([
-                api.get('/users/'),
-                api.get('/groups/')
+                userAPI.get('/users/'),
+                userAPI.get('/groups/')
             ]);
             setUsers(usersRes.data);
             setGroups(groupsRes.data);
@@ -33,7 +33,7 @@ const UserList = () => {
         e.preventDefault();
         setError('');
         try {
-            await api.post('/users/', {
+            await userAPI.post('/users/', {
                 username,
                 password,
                 group_id: parseInt(groupId)

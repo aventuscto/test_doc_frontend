@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import api from '../api';
+import { documentAPI } from '../api';
 
 const MetaTagManager = () => {
     const [tags, setTags] = useState([]);
@@ -10,7 +10,7 @@ const MetaTagManager = () => {
 
     const fetchTags = async () => {
         try {
-            const response = await api.get('/meta-tags/');
+            const response = await documentAPI.get('/meta-tags/');
             setTags(response.data);
         } catch (error) {
             console.error(error);
@@ -26,7 +26,7 @@ const MetaTagManager = () => {
         setError('');
         setLoading(true);
         try {
-            await api.post('/meta-tags/', { name, label });
+            await documentAPI.post('/meta-tags/', { name, label });
             setName('');
             setLabel('');
             fetchTags();

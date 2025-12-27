@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import api from '../api';
+import { documentAPI } from '../api';
 
 const SearchScreen = () => {
     const [documents, setDocuments] = useState([]);
@@ -19,7 +19,7 @@ const SearchScreen = () => {
             if (startDate) params.start_date = startDate;
             if (endDate) params.end_date = endDate;
 
-            const response = await api.get('/documents/', { params });
+            const response = await documentAPI.get('/documents/', { params });
             setDocuments(response.data);
         } catch (error) {
             console.error("Error searching documents:", error);

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import api from '../api';
+import { documentAPI } from '../api';
 
 const DocumentList = ({ refreshTrigger }) => {
     const [documents, setDocuments] = useState([]);
@@ -9,7 +9,7 @@ const DocumentList = ({ refreshTrigger }) => {
         const fetchDocuments = async () => {
             setLoading(true);
             try {
-                const response = await api.get('/documents/');
+                const response = await documentAPI.get('/documents/');
                 setDocuments(response.data);
             } catch (error) {
                 console.error("Error fetching documents", error);

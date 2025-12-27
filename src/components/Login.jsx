@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import api from '../api';
+import { userAPI } from '../api';
 
 const Login = ({ onLogin }) => {
     const [username, setUsername] = useState('');
@@ -16,7 +16,7 @@ const Login = ({ onLogin }) => {
             formData.append('username', username);
             formData.append('password', password);
 
-            const response = await api.post('/token', formData);
+            const response = await userAPI.post('/token', formData);
             localStorage.setItem('token', response.data.access_token);
             onLogin(response.data.access_token, username);
         } catch (err) {

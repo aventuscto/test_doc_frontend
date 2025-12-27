@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import api from '../api';
+import { userAPI } from '../api';
 
 const GroupList = () => {
     const [groups, setGroups] = useState([]);
@@ -11,8 +11,8 @@ const GroupList = () => {
     const fetchData = async () => {
         try {
             const [groupsRes, rolesRes] = await Promise.all([
-                api.get('/groups/'),
-                api.get('/roles/')
+                userAPI.get('/groups/'),
+                userAPI.get('/roles/')
             ]);
             setGroups(groupsRes.data);
             setRoles(rolesRes.data);
@@ -37,7 +37,7 @@ const GroupList = () => {
         e.preventDefault();
         setLoading(true);
         try {
-            await api.post('/groups/', {
+            await userAPI.post('/groups/', {
                 name,
                 role_ids: selectedRoles
             });

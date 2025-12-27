@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import api from '../api';
+import { userAPI } from '../api';
 
 const RoleList = () => {
     const [roles, setRoles] = useState([]);
@@ -11,8 +11,8 @@ const RoleList = () => {
     const fetchData = async () => {
         try {
             const [rolesRes, permsRes] = await Promise.all([
-                api.get('/roles/'),
-                api.get('/permissions/')
+                userAPI.get('/roles/'),
+                userAPI.get('/permissions/')
             ]);
             setRoles(rolesRes.data);
             setPermissions(permsRes.data);
@@ -37,7 +37,7 @@ const RoleList = () => {
         e.preventDefault();
         setLoading(true);
         try {
-            await api.post('/roles/', {
+            await userAPI.post('/roles/', {
                 name,
                 permission_ids: selectedPermissions
             });

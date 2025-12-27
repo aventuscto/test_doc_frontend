@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import api from '../api';
+import { documentAPI } from '../api';
 
 const UploadForm = ({ onUploadSuccess }) => {
     const [title, setTitle] = useState('');
@@ -12,7 +12,7 @@ const UploadForm = ({ onUploadSuccess }) => {
     useEffect(() => {
         const fetchMetaTags = async () => {
             try {
-                const response = await api.get('/meta-tags/');
+                const response = await documentAPI.get('/meta-tags/');
                 setMetaTags(response.data);
             } catch (error) {
                 console.error("Error fetching meta tags:", error);
@@ -43,7 +43,7 @@ const UploadForm = ({ onUploadSuccess }) => {
         formData.append('tags', JSON.stringify(tagValues));
 
         try {
-            await api.post('/documents/', formData, {
+            await documentAPI.post('/documents/', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
